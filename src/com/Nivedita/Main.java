@@ -4,6 +4,8 @@ import com.Nivedita.Task2.NumberGuessingGame;
 import com.Nivedita.Task3.Car;
 import com.Nivedita.Task4.BankAccount;
 import com.Nivedita.Task5.Student;
+import com.Nivedita.Task6.methodOverloading.Calculator;
+import com.Nivedita.Task6.methodOverriding.Dog;
 
 public class Main {
 
@@ -40,6 +42,14 @@ public class Main {
 //        System.out.println(bankAccount1.getAccountBalance());
 
         //Task 5
-        Student s1 = new Student(28,"Nivedita", 1020, "science");
+//        Student s1 = new Student(28,"Nivedita", 1020, "science");
+
+        //Task 6
+        Calculator c1 = new Calculator();
+        c1.add("Hi ","Nivedita");
+        c1.add(10,20);
+        c1.add(10,20,30);
+        Dog d1 = new Dog();
+        System.out.println(d1.sound());
     }
 }
