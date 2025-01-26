@@ -1,11 +1,9 @@
 package com.Nivedita;
 
-import com.Nivedita.Task2.NumberGuessingGame;
-import com.Nivedita.Task3.Car;
-import com.Nivedita.Task4.BankAccount;
-import com.Nivedita.Task5.Student;
-import com.Nivedita.Task6.methodOverloading.Calculator;
-import com.Nivedita.Task6.methodOverriding.Dog;
+import com.Nivedita.Task7.Abstract.Circle;
+import com.Nivedita.Task7.Abstract.Rectangle;
+import com.Nivedita.Task7.Interface.CreditCardPayment;
+import com.Nivedita.Task7.Interface.PayPalPayment;
 
 public class Main {
 
@@ -45,11 +43,26 @@ public class Main {
 //        Student s1 = new Student(28,"Nivedita", 1020, "science");
 
         //Task 6
-        Calculator c1 = new Calculator();
-        c1.add("Hi ","Nivedita");
-        c1.add(10,20);
-        c1.add(10,20,30);
-        Dog d1 = new Dog();
-        System.out.println(d1.sound());
+//        Calculator c1 = new Calculator();
+//        c1.add("Hi ","Nivedita");
+//        c1.add(10,20);
+//        c1.add(10,20,30);
+//        Dog d1 = new Dog();
+//        System.out.println(d1.sound());
+
+          //Task 7
+          Circle circle = new Circle(5);
+          Rectangle rectangle = new Rectangle(2,8);
+          System.out.println("area of circle: "+circle.calculateArea());
+          System.out.println("area of rectangle: "+rectangle.calculateArea());
+
+          PayPalPayment payPalPayment = new PayPalPayment();
+          System.out.println(payPalPayment.pay(500));
+          System.out.println(payPalPayment.refund(200));
+          CreditCardPayment creditCardPayment = new CreditCardPayment();
+          System.out.println(creditCardPayment.pay(700));
+          System.out.println(creditCardPayment.refund(300));
+
+
     }
 }
