@@ -2,6 +2,10 @@ package com.Nivedita;
 
 import com.Nivedita.Task7.Abstract.Circle;
 import com.Nivedita.Task7.Abstract.Rectangle;
+import com.Nivedita.Task7.EmployeeManagementSystem.Employee;
+import com.Nivedita.Task7.EmployeeManagementSystem.EmployeeManager;
+import com.Nivedita.Task7.EmployeeManagementSystem.Intern;
+import com.Nivedita.Task7.EmployeeManagementSystem.Manager;
 import com.Nivedita.Task7.Interface.CreditCardPayment;
 import com.Nivedita.Task7.Interface.PayPalPayment;
 
@@ -51,17 +55,30 @@ public class Main {
 //        System.out.println(d1.sound());
 
           //Task 7
-          Circle circle = new Circle(5);
-          Rectangle rectangle = new Rectangle(2,8);
-          System.out.println("area of circle: "+circle.calculateArea());
-          System.out.println("area of rectangle: "+rectangle.calculateArea());
+//          Circle circle = new Circle(5);
+//          Rectangle rectangle = new Rectangle(2,8);
+//          System.out.println("area of circle: "+circle.calculateArea());
+//          System.out.println("area of rectangle: "+rectangle.calculateArea());
+//
+//          PayPalPayment payPalPayment = new PayPalPayment();
+//          System.out.println(payPalPayment.pay(500));
+//          System.out.println(payPalPayment.refund(200));
+//          CreditCardPayment creditCardPayment = new CreditCardPayment();
+//          System.out.println(creditCardPayment.pay(700));
+//          System.out.println(creditCardPayment.refund(300));
 
-          PayPalPayment payPalPayment = new PayPalPayment();
-          System.out.println(payPalPayment.pay(500));
-          System.out.println(payPalPayment.refund(200));
-          CreditCardPayment creditCardPayment = new CreditCardPayment();
-          System.out.println(creditCardPayment.pay(700));
-          System.out.println(creditCardPayment.refund(300));
+          //Employee Management System
+          EmployeeManager employeeManager = new EmployeeManager();
+          Employee employee1 = new Employee(101,"Nivedita");
+          Manager manager = new Manager(102,"Lakshya",1000);
+          Intern intern = new Intern(103,"Ria",4);
+          Employee employee2 = new Employee(104,"Keshav");
+          employeeManager.addEmployee(employee1);
+          employeeManager.addEmployee(employee2);
+          employeeManager.addEmployee(manager);
+          employeeManager.addEmployee(intern);
+          employeeManager.removeEmployee(employee2);
+          employeeManager.displayEmployee();
 
 
     }
