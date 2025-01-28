@@ -68,17 +68,48 @@ public class Main {
 //          System.out.println(creditCardPayment.refund(300));
 
           //Employee Management System
-          EmployeeManager employeeManager = new EmployeeManager();
-          Employee employee1 = new Employee(101,"Nivedita");
-          Manager manager = new Manager(102,"Lakshya",1000);
-          Intern intern = new Intern(103,"Ria",4);
-          Employee employee2 = new Employee(104,"Keshav");
-          employeeManager.addEmployee(employee1);
-          employeeManager.addEmployee(employee2);
-          employeeManager.addEmployee(manager);
-          employeeManager.addEmployee(intern);
-          employeeManager.removeEmployee(employee2);
-          employeeManager.displayEmployee();
+//          EmployeeManager employeeManager = new EmployeeManager();
+//          Employee employee1 = new Employee(101,"Nivedita");
+//          Manager manager = new Manager(102,"Lakshya",1000);
+//          Intern intern = new Intern(103,"Ria",4);
+//          Employee employee2 = new Employee(104,"Keshav");
+//          employeeManager.addEmployee(employee1);
+//          employeeManager.addEmployee(employee2);
+//          employeeManager.addEmployee(manager);
+//          employeeManager.addEmployee(intern);
+//          employeeManager.removeEmployee(employee2);
+//          employeeManager.displayEmployee();
+
+            //Task 8
+            int arr[] = {7,5,6,8,9,10};
+
+            //Task 1
+            int sum = 0;
+            int avg = 0;
+            for (int ar:arr) {
+                sum += ar;
+            }
+           System.out.println("this is the sum: "+sum);
+           System.out.println("this is the average: "+ sum/arr.length);
+
+           //Task 2
+           int max = Integer.MIN_VALUE;
+           int min = Integer.MAX_VALUE;
+           for (int ar:arr) {
+                if(max<ar) max = ar;
+                if(min>ar) min = ar;
+           }
+           System.out.println("This is max val: "+max);
+           System.out.println("This is min val: "+min);
+
+           //Task 3
+          int matrix[][] = {{1,3},{34,65},{90,3}};
+          for(int i=0; i<matrix.length; i++){
+                for(int j=0; j<matrix[0].length; j++){
+                      System.out.print(matrix[i][j]+" ");
+                }
+                System.out.println();
+          }
 
 
     }
