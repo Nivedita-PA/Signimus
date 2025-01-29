@@ -81,36 +81,64 @@ public class Main {
 //          employeeManager.displayEmployee();
 
             //Task 8
-            int arr[] = {7,5,6,8,9,10};
+//            int arr[] = {7,5,6,8,9,10};
+//
+//            //Task 1
+//            int sum = 0;
+//            int avg = 0;
+//            for (int ar:arr) {
+//                sum += ar;
+//            }
+//           System.out.println("this is the sum: "+sum);
+//           System.out.println("this is the average: "+ sum/arr.length);
+//
+//           //Task 2
+//           int max = Integer.MIN_VALUE;
+//           int min = Integer.MAX_VALUE;
+//           for (int ar:arr) {
+//                if(max<ar) max = ar;
+//                if(min>ar) min = ar;
+//           }
+//           System.out.println("This is max val: "+max);
+//           System.out.println("This is min val: "+min);
+//
+//           //Task 3
+//          int matrix[][] = {{1,3},{34,65},{90,3}};
+//          for(int i=0; i<matrix.length; i++){
+//                for(int j=0; j<matrix[0].length; j++){
+//                      System.out.print(matrix[i][j]+" ");
+//                }
+//                System.out.println();
+//          }
+         //Task 9
+        // reverse a string;
+        String name = "madam";
+        String rev = "";
+        for(int i=name.length()-1; i>=0; i--){
+            rev += name.charAt(i);
+        }
+        System.out.println(rev);
 
-            //Task 1
-            int sum = 0;
-            int avg = 0;
-            for (int ar:arr) {
-                sum += ar;
+        //palindrome
+        boolean isPalindrome = true;
+        int i=0;
+        int j=name.length()-1;
+        while(i<j){
+            if(name.charAt(i)!=name.charAt(j)){
+                isPalindrome = false;
+                break;
             }
-           System.out.println("this is the sum: "+sum);
-           System.out.println("this is the average: "+ sum/arr.length);
+            i++;
+            j--;
+        }
+        System.out.println("Is "+ name + " a palindrome: "+isPalindrome);
 
-           //Task 2
-           int max = Integer.MIN_VALUE;
-           int min = Integer.MAX_VALUE;
-           for (int ar:arr) {
-                if(max<ar) max = ar;
-                if(min>ar) min = ar;
-           }
-           System.out.println("This is max val: "+max);
-           System.out.println("This is min val: "+min);
-
-           //Task 3
-          int matrix[][] = {{1,3},{34,65},{90,3}};
-          for(int i=0; i<matrix.length; i++){
-                for(int j=0; j<matrix[0].length; j++){
-                      System.out.print(matrix[i][j]+" ");
-                }
-                System.out.println();
-          }
-
+        //count of char
+        int count = 0;
+        for(int k=0; k<name.length(); k++){
+            if(name.charAt(k)=='m') count++;
+        }
+        System.out.println(count);
 
     }
 }
