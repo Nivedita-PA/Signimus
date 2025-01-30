@@ -163,9 +163,7 @@ public class Main {
         char c2[] = two.toCharArray();
         Arrays.sort(c1);
         Arrays.sort(c2);
-        String one1 = c1.toString();
-        String two2 = c2.toString();
-        System.out.println(one1.contains(two2));
+        System.out.println(Arrays.equals(c1,c2));
 
         //reverse a string and remove its vowels
         StringBuilder s = new StringBuilder("geology");
