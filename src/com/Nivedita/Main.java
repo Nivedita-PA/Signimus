@@ -9,6 +9,8 @@ import com.Nivedita.Task7.EmployeeManagementSystem.Manager;
 import com.Nivedita.Task7.Interface.CreditCardPayment;
 import com.Nivedita.Task7.Interface.PayPalPayment;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -112,33 +114,76 @@ public class Main {
 //          }
          //Task 9
         // reverse a string;
-        String name = "madam";
-        String rev = "";
-        for(int i=name.length()-1; i>=0; i--){
-            rev += name.charAt(i);
-        }
-        System.out.println(rev);
+//        String name = "madam";
+//        String rev = "";
+//        for(int i=name.length()-1; i>=0; i--){
+//            rev += name.charAt(i);
+//        }
+//        System.out.println(rev);
+//
+//        //palindrome
+//        boolean isPalindrome = true;
+//        int i=0;
+//        int j=name.length()-1;
+//        while(i<j){
+//            if(name.charAt(i)!=name.charAt(j)){
+//                isPalindrome = false;
+//                break;
+//            }
+//            i++;
+//            j--;
+//        }
+//        System.out.println("Is "+ name + " a palindrome: "+isPalindrome);
+//
+//        //count of char
+//        int count = 0;
+//        for(int k=0; k<name.length(); k++){
+//            if(name.charAt(k)=='m') count++;
+//        }
+//        System.out.println(count);
 
-        //palindrome
-        boolean isPalindrome = true;
-        int i=0;
-        int j=name.length()-1;
+        //Task 10
+        //reverse an array
+        int arr[]  = {1,2,9,10,34,58,7,5};
+        int i = 0;
+        int j = arr.length-1;
         while(i<j){
-            if(name.charAt(i)!=name.charAt(j)){
-                isPalindrome = false;
-                break;
-            }
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
             i++;
             j--;
         }
-        System.out.println("Is "+ name + " a palindrome: "+isPalindrome);
+        System.out.println(Arrays.toString(arr));
 
-        //count of char
-        int count = 0;
-        for(int k=0; k<name.length(); k++){
-            if(name.charAt(k)=='m') count++;
+        //anagrams
+        String one = "abcefg";
+        String two = "efgabc";
+        char c1[] = one.toCharArray();
+        char c2[] = two.toCharArray();
+        Arrays.sort(c1);
+        Arrays.sort(c2);
+        String one1 = c1.toString();
+        String two2 = c2.toString();
+        System.out.println(one1.contains(two2));
+
+        //reverse a string and remove its vowels
+        StringBuilder s = new StringBuilder("geology");
+        System.out.println(s.reverse());
+        String ans = "";
+        for(int k=0; k<s.length(); k++){
+            if(s.charAt(k) == 'a' || s.charAt(k) == 'e'
+                    || s.charAt(k) == 'i' || s.charAt(k) == 'o'
+                    || s.charAt(k) == 'u' || s.charAt(k) == 'A'
+                    || s.charAt(k) == 'E' || s.charAt(k) == 'I'
+                    || s.charAt(k) == 'O'
+                    || s.charAt(k) == 'U')continue;
+            else ans += s.charAt(k);
         }
-        System.out.println(count);
+        System.out.println(ans);
+
+
+
 
     }
 }
