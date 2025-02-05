@@ -1,5 +1,7 @@
 package com.Nivedita;
 
+import com.Nivedita.Task11.Department;
+import com.Nivedita.Task11.Employees;
 import com.Nivedita.Task7.Abstract.Circle;
 import com.Nivedita.Task7.Abstract.Rectangle;
 import com.Nivedita.Task7.EmployeeManagementSystem.Employee;
@@ -9,7 +11,10 @@ import com.Nivedita.Task7.EmployeeManagementSystem.Manager;
 import com.Nivedita.Task7.Interface.CreditCardPayment;
 import com.Nivedita.Task7.Interface.PayPalPayment;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Main {
 
@@ -144,44 +149,58 @@ public class Main {
 
         //Task 10
         //reverse an array
-        int arr[]  = {1,2,9,10,34,58,7,5};
-        int i = 0;
-        int j = arr.length-1;
-        while(i<j){
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-            i++;
-            j--;
-        }
-        System.out.println(Arrays.toString(arr));
+//        int arr[]  = {1,2,9,10,34,58,7,5};
+//        int i = 0;
+//        int j = arr.length-1;
+//        while(i<j){
+//            int temp = arr[i];
+//            arr[i] = arr[j];
+//            arr[j] = temp;
+//            i++;
+//            j--;
+//        }
+//        System.out.println(Arrays.toString(arr));
+//
+//        //anagrams
+//        String one = "abcefg";
+//        String two = "efgabc";
+//        char c1[] = one.toCharArray();
+//        char c2[] = two.toCharArray();
+//        Arrays.sort(c1);
+//        Arrays.sort(c2);
+//        System.out.println(Arrays.equals(c1,c2));
+//
+//        //reverse a string and remove its vowels
+//        StringBuilder s = new StringBuilder("geology");
+//        System.out.println(s.reverse());
+//        String ans = "";
+//        for(int k=0; k<s.length(); k++){
+//            if(s.charAt(k) == 'a' || s.charAt(k) == 'e'
+//                    || s.charAt(k) == 'i' || s.charAt(k) == 'o'
+//                    || s.charAt(k) == 'u' || s.charAt(k) == 'A'
+//                    || s.charAt(k) == 'E' || s.charAt(k) == 'I'
+//                    || s.charAt(k) == 'O'
+//                    || s.charAt(k) == 'U')continue;
+//            else ans += s.charAt(k);
+//        }
+//        System.out.println(ans);
 
-        //anagrams
-        String one = "abcefg";
-        String two = "efgabc";
-        char c1[] = one.toCharArray();
-        char c2[] = two.toCharArray();
-        Arrays.sort(c1);
-        Arrays.sort(c2);
-        System.out.println(Arrays.equals(c1,c2));
+        //Task 11
+        Employees employee = new Employees(101,"Neha","developer",100010);
+        Department department = new Department();
+        department.displayEmployeeDetails(employee);
 
-        //reverse a string and remove its vowels
-        StringBuilder s = new StringBuilder("geology");
-        System.out.println(s.reverse());
-        String ans = "";
-        for(int k=0; k<s.length(); k++){
-            if(s.charAt(k) == 'a' || s.charAt(k) == 'e'
-                    || s.charAt(k) == 'i' || s.charAt(k) == 'o'
-                    || s.charAt(k) == 'u' || s.charAt(k) == 'A'
-                    || s.charAt(k) == 'E' || s.charAt(k) == 'I'
-                    || s.charAt(k) == 'O'
-                    || s.charAt(k) == 'U')continue;
-            else ans += s.charAt(k);
-        }
-        System.out.println(ans);
-
-
-
+        //Sorting
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(4);
+        arr.add(8);
+        arr.add(83);
+        arr.add(20);
+        arr.add(47);
+        arr.add(0);
+        System.out.println(arr);
+        Collections.sort(arr);
+        System.out.println(arr);
 
     }
 }
