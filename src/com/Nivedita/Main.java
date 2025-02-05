@@ -186,21 +186,24 @@ public class Main {
 //        System.out.println(ans);
 
         //Task 11
-        Employees employee = new Employees(101,"Neha","developer",100010);
-        Department department = new Department();
-        department.displayEmployeeDetails(employee);
+//        Employees employee = new Employees(101,"Neha","developer",100010);
+//        Department department = new Department();
+//        department.displayEmployeeDetails(employee);
+//
+//        //Sorting
+//        ArrayList<Integer> arr = new ArrayList<>();
+//        arr.add(4);
+//        arr.add(8);
+//        arr.add(83);
+//        arr.add(20);
+//        arr.add(47);
+//        arr.add(0);
+//        System.out.println(arr);
+//        Collections.sort(arr);
+//        System.out.println(arr);
 
-        //Sorting
-        ArrayList<Integer> arr = new ArrayList<>();
-        arr.add(4);
-        arr.add(8);
-        arr.add(83);
-        arr.add(20);
-        arr.add(47);
-        arr.add(0);
-        System.out.println(arr);
-        Collections.sort(arr);
-        System.out.println(arr);
+        //Task 12
+
 
     }
 }
