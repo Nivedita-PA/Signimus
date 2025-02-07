@@ -30,6 +30,35 @@ public class RandomNumberFile {
         }catch (IOException e){
             System.out.println(e.getMessage());
         }
+        //COUNTING THE NO. OF LINES IN A FILE
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            int count = 0;
+            String read;
+            while((read = br.readLine())!=null){
+                count++;
+            }
+            System.out.println(count);
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+
+        //COPYING A BINARY FILE
+        String source = "source.jpg";
+        String destination = "destination.jpg";
+
+        try{
+            FileInputStream fis =  new FileInputStream(source);
+            FileOutputStream fos = new FileOutputStream(destination);
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            while ((bytesRead = fis.read(buffer)) != -1) {
+                fos.write(buffer, 0, bytesRead);
+            }
+            System.out.println("File copied successfully");
+        }catch (IOException e){
+            System.out.println("Error copying file: "+e.getMessage());
+        }
 
     }
 }
