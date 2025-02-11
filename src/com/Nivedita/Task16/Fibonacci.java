@@ -12,7 +12,6 @@ public class Fibonacci {
         if (a > n) {
             return;
         }
-
         // Print the current Fibonacci number
         System.out.print(a + " ");
         printFibonacci(n, b, a + b);
